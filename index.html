@@ -16,12 +16,13 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <section data-auto-animate>
+        <section data-auto-animate data-transition="convex-in concave-out">
             <h3>Debugger in software engineering</h3>
             <p>Przemysław Kędzierski</p>
+            <img src="./img/qr.png">
         </section>
-        <section>What is debugging?</section>
-        <section data-auto-animate><h3>Debugging methods</h3>
+        <section data-transition="convex-in concave-out">What is debugging?</section>
+        <section data-auto-animate data-transition="convex-in concave-out"><h3>Debugging methods</h3>
             <ul>
                 <li>Printing</li>
                 <pre style="width: 100% !important" data-id="code"><code data-line-numbers class="hljs" data-trim>
@@ -29,7 +30,7 @@
 					</code></pre>
             </ul>
         </section>
-        <section data-auto-animate><h3>Debugging methods</h3>
+        <section data-auto-animate data-transition="convex-in concave-out"><h3>Debugging methods</h3>
             <ul>
                 <li>Printing</li>
                 <pre style="width: 100% !important" data-id="code"><code data-line-numbers class="hljs" data-trim>
@@ -38,7 +39,7 @@
                 <li>Logging</li>
             </ul>
         </section>
-        <section data-auto-animate><h3>Debugging methods</h3>
+        <section data-auto-animate data-transition="convex-in concave-out"><h3>Debugging methods</h3>
             <ul>
                 <li>Printing</li>
                 <pre style="width: 100% !important" data-id="code"><code data-line-numbers class="hljs" data-trim>
@@ -48,7 +49,7 @@
                 <li>Unit testing</li>
             </ul>
         </section>
-        <section data-auto-animate><h3>Debugging methods</h3>
+        <section data-auto-animate data-transition="convex-in concave-out"><h3>Debugging methods</h3>
             <ul>
                 <li>Printing</li>
                 <pre style="width: 100% !important" data-id="code"><code data-line-numbers class="hljs" data-trim>
@@ -59,7 +60,7 @@
                 <li>Static code analysis</li>
             </ul>
         </section>
-        <section data-auto-animate><h3>Debugging methods</h3>
+        <section data-auto-animate data-transition="convex-in concave-out"><h3>Debugging methods</h3>
             <ul>
                 <li>Printing</li>
                 <pre style="width: 100% !important" data-id="code"><code data-line-numbers class="hljs" data-trim>
@@ -71,15 +72,103 @@
                 <li>Debugging tools</li>
             </ul>
         </section>
-        <section>
+        <section data-transition="convex-in concave-out">
             <section>
-            <img src="./img/breakpoint.png">
+                <img src="./img/breakpoint.png">
             </section>
             <section>
                 <img src="./img/program_stop.png">
+            </section>
         </section>
+        <section data-transition="convex-in concave-out">
+            <section>
+                <h3>
+                    Breakpoints
+                </h3>
+            </section>
+            <section>
+                <h3>
+                    Line breakpoints
+                </h3>
+                <img src="./img/line_breakpoint.png">
+            </section>
+            <section>
+                <h3>
+                    Method breakpoints
+                </h3>
+                <img src="./img/method_breakpoint.png">
+            </section>
+            <section>
+                <h3>
+                    Field watchpoints
+                </h3>
+                <img src="./img/field_watchpoint.png">
+            </section>
+            <section>
+                <h3>
+                    Exception breakpoints
+                </h3>
+                <img src="./img/exception_breakpoint.png">
+            </section>
+            <section data-auto-animate>
+                <h3>
+                    Breakpoint pattern
+                </h3>
+                <img src="./img/breakpoint_pattern.png">
+            </section>
+            <section data-auto-animate>
+                <h3>
+                    Breakpoint pattern
+                </h3>
+                <table>
+                    <thead><tr>
+                        <th>Class Pattern</th>
+                        <th>Method Name</th>
+                        <th>Result</th>
+                    </tr></thead>
+                    <tbody><tr>
+                        <td>Car</td>
+                        <td>*</td>
+                        <td>All methods from Car class</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>getName</td>
+                        <td>All getName methods</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>*</td>
+                        <td>All methods</td>
+                    </tr>
+                    <tr>
+                        <td>Car</td>
+                        <td>get*</td>
+                        <td>All getters from Car class</td>
+                    </tr></tbody>
+                </table>
         </section>
-        <section>
+            <section>
+                <h3>
+                    Conditional Breakpoints
+                </h3>
+                <img src="./img/conditional_breakpoints.png">
+            </section>
+            <section>
+                <h4 style="margin-bottom: 0;">
+                    Other options
+                </h4>
+                <img src="./img/breakpoint_options.png">
+            </section>
+            <section>
+                <h3>
+                    Evaluate expression
+                </h3>
+                <p>you can execute the logic using program variables</p>
+                <img src="./img/evaluate_expression.png">
+            </section>
+        </section>
+        <section data-transition="convex-in concave-out">
             <section>
                 <h3>
                     Memory Analysis
@@ -87,6 +176,53 @@
             </section>
             <section>
                 <img src="./img/memory_config.png">
+            </section>
+            <section>
+                <img src="./img/memory_panel.png">
+            </section>
+            <section>
+                <p>You can find the instance by</p>
+                <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+						this.isEqual(LocalDate.of(2027,11,18))
+					</code></pre>
+                <img src="./img/memory_instances.png">
+            </section>
+        </section>
+        <section data-transition="convex-in concave-out">
+            <section>
+                <h3>
+                    Analysis of the Java Stream
+                </h3>
+            </section>
+            <section>
+                <pre><code style="width:100% !important;" data-line-numbers class="hljs" data-trim>
+                    public void start() {
+                      System.out.println("Car started");
+                      IntStream.iterate(0, n -> n + 1)
+                          .limit(90)
+                          .filter(speed -> speed < 50 ?
+                                  speed % 4 == 0 : speed % 3 == 0)
+                          .boxed()
+                          .map(speed -> {
+                              int modulo8Result = speed % 7;
+                              return modulo8Result > 3 ?
+                                      speed - 1 : speed + modulo8Result;
+                          })
+                          .forEach(speed ->
+                                      System.out.println("Speed: " + speed));
+                    }
+                    </code></pre>
+            </section>
+            <section>
+                <img src="./img/trace_stream_button.png">
+            </section>
+            <section>
+                <h3>Available options</h3>
+                <ul>
+                    <li>Split mode</li>
+                    <li>Flat mode</li>
+                </ul>
+                <img src="./img/stream_view.png">
             </section>
         </section>
     </div>
